@@ -1,0 +1,84 @@
+### read all users
+
+GET http://localhost:4000/user-router/users
+
+
+###create user
+
+POST http://localhost:4000/user-router/users
+Content-Type: application/json
+
+{
+    "username":"hari",
+    "password":"hari",
+    "age":20
+}
+
+
+###read user by id
+
+GET http://localhost:4000/user-router/users/698384c3b12d2d50caabaf5e
+###update the user 
+
+PUT http://localhost:4000/user-router/users/698384c3b12d2d50caabaf5e
+Content-Type: application/json
+
+{
+    "username":"harish",
+    "passsword":"@12345",
+    "age":16
+}
+
+###delete user by id
+
+DELETE http://127.0.0.1:4000/user-router/users/697dba7c3a60a55668c7409d
+
+
+### read all products
+
+GET http://127.0.0.1:4000/product-router/products
+
+###create user
+
+POST http://127.0.0.1:4000/product-router/products
+Content-Type: application/json
+
+{
+    "pid":100,
+    "productName":"watch",
+    "price":10000
+}
+
+###update the user
+
+PUT http://localhost:4000/product-router/products/697ee08b73c91a0d089b9369
+Content-Type: application/json
+
+{
+    "pid":100,
+    "productName":"laptop",
+    "price":500
+}
+
+###read product by id
+
+GET http://localhost:4000/product-router/products/697dd199f5ac7b84bc5ea2f
+
+###delete product by id
+
+DELETE http://localhost:4000/product-router/products/697ee179a3cf801c0f285fc
+
+
+
+
+####user authentication (login) req
+POST http://localhost:4000/user-router/auth
+Content-Type: application/json
+
+{
+    "username":"hari",
+    "password":"hari"
+}
+
+###authenticated route
+GET http://localhost:4000/user-router/test
